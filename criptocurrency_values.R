@@ -9,5 +9,5 @@ data <- ralger::table_scrap("https://goldprice.org/cryptocurrency-price") %>%
 #Write data to file, new data scraped after automation will be appended
 write.table(data, "data/data.csv",
             sep = ",", col.names = !file.exists("data/data.csv"),
-            append = T, row.names = F)
+            append = F, row.names = F)
 
