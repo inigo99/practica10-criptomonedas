@@ -25,6 +25,8 @@ jobs:
  # Add new files in data folder, commit along with other modified files, push
     - name: Commit files
       run: |
+        ls -la data
+        git log -1 --format='%H'
         git config --local user.name actions-user
         git config --local user.email "actions@github.com"
         git add data/*
